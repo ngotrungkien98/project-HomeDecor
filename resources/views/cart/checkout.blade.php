@@ -36,6 +36,7 @@
             @csrf
                 <div class="">
                     <input type="hidden" name="amount" value="{{ $amount}}">
+                    
                     <label for="card-element">
                         Credit or debit card
                     </label>
@@ -50,6 +51,12 @@
               
 
                 </div>
+                <br>
+                <br>
+                
+                <div class="form-group">
+                  <input class="form-control" name="description" type="" placeholder="You address *and phone number" required="required" data-validation-required-message="Please enter your name." />
+               </div>
                 <button class="btn btn-primary mt-3">Submit Payment</button>
 
                 <p id="loading" style="display: none;">Payment is in process. Please Wait...</p>

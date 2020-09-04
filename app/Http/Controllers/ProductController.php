@@ -144,7 +144,7 @@ class ProductController extends Controller
             'currency' => 'USD',
             'source' => $request->stripeToken,
             'amount'   => $request->amount,
-            'description' => ' Test from laravel new app'
+            'description' => $request->description
         ]);
 
         $chargeId = $charge['id'];
@@ -178,6 +178,11 @@ class ProductController extends Controller
         return view('product.indexcategory', compact('categoryId'));
     }
 
+        public function search(){
+            $search_text =$_GET['query'];
+            $products = Product::where('title','LIKE','%'.$search_text.'%')->with('categories')->get();
+            return view('product.search',compact('product'));
+        }
 
 
 }

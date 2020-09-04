@@ -7,6 +7,10 @@
       @if (session()->has('success'))
       <div class="alert alert-success">{{ session() -> get('success') }}</div>
       @endif
+      <form action="" method="get" action="{{ url('/search')}}">
+      <input type="search" name="query" placeholder="search">
+      <button type="submit">search</button>
+      </form>
       <div class="row">
          @foreach ($products as $product)
          <div class="col-md-4">

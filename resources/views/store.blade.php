@@ -6,6 +6,8 @@
 use Illuminate\Support\Facades\DB;
 
 $showProduct = DB::select('select * from brand');
+$hotnews = DB::select('select * from news order by id desc limit 3');
+$hotproduct = DB::select('select * from products order by id desc limit 4');
 ?>
 
 
@@ -36,8 +38,8 @@ $showProduct = DB::select('select * from brand');
     <div class="carousel-item">
       <img src="{{ Voyager::image( $sp->image3 ) }}" class="d-block w-100" alt="..." style="height: 550px;">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        <!-- <h5>Third slide label</h5>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> -->
       </div>
     </div>
   </div>
@@ -71,7 +73,54 @@ $showProduct = DB::select('select * from brand');
     @endforeach
 
   </div>
-  </div>
 </section>
 
+
+
+<section class="page-section bg-light">
+<div class="container-fluid">
+<div style="padding-left: 182px;">
+      <h2 class="section-heading text-uppercase">Today Good News</h2>
+    </div>
+
+  <div class="row">
+    <div class="col-sm-9">
+    @foreach ($hotnews as $sp)
+    <div class="col-lg-9 col-md-6">
+      <div class="categories__post__item__pic set-bg">
+        <div class="post__meta">
+          <img style="float: left;" src="{{ Voyager::image( $sp->image ) }}" alt="Girl in a jacket" class="img-thumbnail">
+
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-7 col-md-6">
+      <div class="categories__post__item__text">
+        <h3><a href="{{ URL::to('news/read/'.$sp->id) }}">{{$sp->title}}</a></h3>
+        <p>Time: {{$sp->date}}</p>
+        <p>{{$sp->content}}</p>
+      </div>
+    </div>
+
+
+        @endforeach
+    </div>
+    <div class="col-sm-3" >
+    <h2 style="padding-left: 13px">News Product</h2>
+    @foreach ($hotproduct as $pro)
+    <div class="col-lg-12 col-md-3">
+      <div class="categories__post__item__pic set-bg">
+        <div class="post__meta" >
+        <img style="float: left;" src="{{ Voyager::image( $pro->image ) }}" alt="Girl in a jacket" class="img-thumbnail">
+        <a href="{{ URL::to('productdetail/'.$pro->id) }}" ><h3>{{$pro->title}}</h3></a>
+        </div>
+        <a href="{{ route('cart.add', $pro -> id)}}" class="btn btn-primary" style="margin-bottom: 50px;">Add to Cart</a>
+      </div>
+    </div>
+    @endforeach
+  </div>
+  
+  </div>
+</div>
+</section>
 @endsection

@@ -176,8 +176,7 @@ a {
 }
 
 a:hover {
-  color: #1d68a7;
-  text-decoration: underline;
+
 }
 
 a:not([href]):not([class]) {
@@ -2959,8 +2958,8 @@ fieldset:disabled a.btn {
 
 .btn-dark {
   color: #fff;
-  background-color: #343a40;
-  border-color: #343a40;
+  background-color: #3b5998;
+  border-color: #3b5998;
 }
 
 .btn-dark:hover {

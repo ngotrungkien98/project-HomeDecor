@@ -35,6 +35,7 @@ Route::put('/products/{product}', 'ProductController@update')->name('product.upd
 
 Route::get('/productdetail/{id}', 'ProductController@productdetail')->name('product.detail');
 Route::get('/products/{id}', 'ProductController@categoryId')->name('category.categoryId');
+Route::get('/search','ProductController@search');
 
 
 Route::get('/addToCart/{product}', 'ProductController@addToCart')->name('cart.add');
@@ -64,3 +65,6 @@ Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback
 //news
 Route::get('/news', 'HomeNavController@news')->name('news');
 Route::get('/news/read/{id}', 'HomeNavController@readnews')->name('read.news');
+
+
+//search

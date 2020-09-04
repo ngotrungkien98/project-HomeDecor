@@ -6,10 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
-
-
 
 class LoginController extends Controller
 {
@@ -41,57 +40,25 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+        $this->redirectTo = url()->previous();
     }
 
-    /**
-     * Redirect the user to the GitHub authentication page.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function redirectToProvider()
+    public function showLoginForm()
     {
-        return Socialite::driver('facebook')->redirect();
-    }
-
-    /**
-     * Obtain the user information from GitHub.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function handleProviderCallback()
-    {
-        $userSocial = Socialite::driver('facebook')->user();
-
-
-        $findUser = User::where('email',$userSocial->email)->first();
-        
-        if($findUser){
-            Auth::login($findUser);
-
-            return view('/home');
-
-        }else{
-            $user = new User;
-            $user->name = $userSocial->name;
-
-            $user->email = $userSocial->email;
-            
-            $user->password = bcrypt(123456);
-
-            $user->save();
-
-            Auth::login($user);
-
-            return view('home');
-            
-
+        if (!session()->has('url.intended')) {
+            session(['url.intended' => url()->previous()]);
         }
-      
+        return view('auth.login');
     }
 
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
 
+        $request->session()->invalidate();
 
-
+        return $this->loggedOut($request) ?: redirect()->back();;
+    }
     //google--login
      /**
      * Redirect the user to the google authentication page.
@@ -122,7 +89,7 @@ class LoginController extends Controller
             return view('/home');
 
         }else{
-            $user = new User;
+            $user = new User();
             $user->name = $userSocial->name;
 
             $user->email = $userSocial->email;

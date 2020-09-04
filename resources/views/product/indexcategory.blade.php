@@ -12,7 +12,7 @@
          <div class="col-md-4">
             <div class="card mb-2">
                <a href="{{ URL::to('productdetail/'.$categoryId->id) }}" >
-                  <img class="card-img-top" src="{{ Voyager::image($categoryId -> image) }}">
+                  <img id="product" src="{{ Voyager::image($categoryId -> image) }}">
                   <div class="card-body">
                      <h5 class="card-title">{{ $categoryId -> title }}</h5>
                      <p><strong> $ {{ $categoryId->price }}</strong></p>
