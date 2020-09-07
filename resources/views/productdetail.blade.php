@@ -27,7 +27,7 @@
        <h3>${{ $products -> price }}</h3>
 
 
-			<p> {{ $products -> content }}</p>
+			<p> {!! $products -> content !!}</p>
          <a href="{{ route('cart.add', $products -> id)}}" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Add to cart </a>
 
 		</div>

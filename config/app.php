@@ -163,6 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Cartalyst\Stripe\Laravel\StripeServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
+       Barryvdh\DomPDF\ServiceProvider::class,
 
 
         /*
@@ -232,6 +233,7 @@ return [
         'Stripe' => Cartalyst\Stripe\Laravel\Facades\Stripe::class,
         'Alert' => RealRashid\SweetAlert\Facades\Alert::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
 
     ],

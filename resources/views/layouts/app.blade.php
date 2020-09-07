@@ -52,6 +52,15 @@
                <!-- Right Side Of Navbar -->
                <ul class="navbar-nav ml-auto">
                   <!-- Authentication Links -->
+                
+                     <form method="get" action="{{ url('/search')}}">
+                      
+                           <input type="search" name="query" placeholder="search" class="form-control" id="exampleInputPassword1" placeholder="search">
+                           <button type="submit" class="btn btn-primary">search</button>
+                     
+                     </form>
+                 
+
                   <ul class="navbar-nav  ml-auto">
                      <li class="nav-item">
                         <a class="nav-link" href="store#Category">Category</a>

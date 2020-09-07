@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Cart;
 use App\Categories;
+use PDF;
 use App\Product;
+use Cartalyst\Stripe\Api\Products;
 use Cartalyst\Stripe\Laravel\Facades\Stripe;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -166,23 +168,37 @@ class ProductController extends Controller
 
     public function productdetail(Product $product, Request $request)
     {
-        $id = $request-> id;
-        $productdetail = Product::where('id',$id)->get();
+        $id = $request->id;
+        $productdetail = Product::where('id', $id)->get();
         return view('productdetail', compact('productdetail'));
     }
 
     public function categoryId(Product $product, Request $request)
     {
-        $id = $request-> id;
-        $categoryId = Product::where('category_id',$id)->get();
+        $id = $request->id;
+        $categoryId = Product::where('category_id', $id)->get();
         return view('product.indexcategory', compact('categoryId'));
     }
 
-        public function search(){
-            $search_text =$_GET['query'];
-            $products = Product::where('title','LIKE','%'.$search_text.'%')->with('categories')->get();
-            return view('product.search',compact('product'));
-        }
+    public function search()
+    {
+        $search_text = $_GET['query'];
+        $products = Product::where('title', 'LIKE', '%' . $search_text . '%')->get();
+        return view('product.search', compact('products'));
+    }
 
 
+    // print
+    public function report()
+    {
+        $pdf = PDF::loadView('report.pdf');
+        return $pdf->download('report.pdf');
+
+    }
+    public function reportBill()
+    {
+        $pdf = PDF::loadView('report.pdfBill');
+        return $pdf->download('reportBill.pdf');
+
+    }
 }

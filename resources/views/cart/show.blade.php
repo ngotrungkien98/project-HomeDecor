@@ -69,6 +69,7 @@
                             Total Quantities is {{$cart->totalQty}}
                         </p> -->
                         <a href="{{ route('cart.checkout', $cart->totalPrice)}}" class="btn btn-info">Thanh toán</a>
+                        <a href="{{url('/reportBill')}}"  class="btn btn-info">Report</a>
                     </div>
                 </div>
             </div>

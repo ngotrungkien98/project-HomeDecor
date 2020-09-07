@@ -35,6 +35,7 @@ Route::put('/products/{product}', 'ProductController@update')->name('product.upd
 
 Route::get('/productdetail/{id}', 'ProductController@productdetail')->name('product.detail');
 Route::get('/products/{id}', 'ProductController@categoryId')->name('category.categoryId');
+//search
 Route::get('/search','ProductController@search');
 
 
@@ -67,4 +68,12 @@ Route::get('/news', 'HomeNavController@news')->name('news');
 Route::get('/news/read/{id}', 'HomeNavController@readnews')->name('read.news');
 
 
-//search
+
+
+//print
+Route::get('/report','ProductController@report');
+Route::get('/reportBill','ProductController@reportBill');
+
+
+//comment
+Route::get('/posts/create','PostController@index');
