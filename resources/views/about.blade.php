@@ -12,11 +12,12 @@
             <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="" /></div>
             <div class="timeline-panel">
                <div class="timeline-heading">
-                  <h4>2009-2011</h4>
-                  <h4 class="subheading">Our Humble Beginnings</h4>
+                  <h4>2020-2020</h4>
+                  <h4 class="subheading">Our Website Beginnings</h4>
                </div>
                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted">Hello and welcome to HomeDecor, the place to find the best Decor for every taste and occasion. We thoroughly check the quality of our goods, working only with reliable suppliers so that you only receive the best quality product.
+                </p>
                </div>
             </div>
          </li>
@@ -28,7 +29,8 @@
                   <h4 class="subheading">We decided our job</h4>
                </div>
                <div class="timeline-body">
-                  <p class="text-muted">mlem mlem</p>
+                  <p class="text-muted">
+                    We at HomeDecor believe in high quality and exceptional customer service. But most importantly, we believe shopping is a right, not a luxury, so we strive to deliver the best products at the most affordable prices, and ship them to you regardless of where you are located.</p>
                </div>
             </div>
          </li>
@@ -36,11 +38,11 @@
             <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="" /></div>
             <div class="timeline-panel">
                <div class="timeline-heading">
-                  <h4>December 2012</h4>
-                  <h4 class="subheading">Transition to Full Service</h4>
+                  <h4>August 2020</h4>
+                  <h4 class="subheading">Our founding</h4>
                </div>
                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted">At HomeDecor, our aim is to offer you HomeDecor that show you that we really care! Not only have we got the trendiest HomeDecor, but we can also guarantee that they are of the finest quality</p>
                </div>
             </div>
          </li>
@@ -48,11 +50,11 @@
             <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="" /></div>
             <div class="timeline-panel">
                <div class="timeline-heading">
-                  <h4>July 2014</h4>
-                  <h4 class="subheading">Phase Two Expansion</h4>
+                  <h4>August 2020</h4>
+                  <h4 class="subheading">Early growth & funding</h4>
                </div>
                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                  <p class="text-muted">The interests of our customers are always the top priority for us, so we hope you will enjoy our products as much as we enjoy making them available to you.</p>
                </div>
             </div>
          </li>

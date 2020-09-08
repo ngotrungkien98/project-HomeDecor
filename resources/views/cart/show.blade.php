@@ -77,8 +77,8 @@
         @else
 
         <div id="cart">
-            <p>Không có sản phẩm trong giỏ hàng của bạn</p>
-            <button type="button" class="btn btn-outline-secondary" id="bt"><a href="{{ route('store')}}" id="btt">ĐẾN TRANG CHỦ HOME DECOR</a></button>
+            <p>Cart is empty, please buy something</p>
+            <button type="button" class="btn btn-outline-secondary" id="bt"><a href="{{ route('store')}}" id="btt">BACK TO HOMEPAGE DECOR</a></button>
         </div>
 
         @endif

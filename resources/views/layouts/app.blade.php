@@ -63,7 +63,7 @@
 
                   <ul class="navbar-nav  ml-auto">
                      <li class="nav-item">
-                        <a class="nav-link" href="store#Category">Category</a>
+                        <a class="nav-link" href="{{ route('category')}}">Category</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="{{ route('news')}}">News</a>
@@ -74,9 +74,7 @@
                      <li class="nav-item">
                         <a class="nav-link" href="{{ route('team')}}">Team</a>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contact')}}">Contact</a>
-                     </li>
+               
 
                      @guest
                      <li class="nav-item">
@@ -100,7 +98,7 @@
                            {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                           <a href="{{ route('order.index') }}" class="dropdown-item">Orders <i class="fas fa-grip-horizontal ml-2"></i></a>
+            
                            <div class="dropdown-divider"></div>
                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">

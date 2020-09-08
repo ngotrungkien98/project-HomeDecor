@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Categories;
 use App\News;
 use App\Product;
 
@@ -13,14 +15,16 @@ class HomeNavController extends Controller
         return view('about');
     }
 
-    public function contact()
-    {
-        return view('contact');
-    }
 
     public function team()
     {
         return view('team');
+    }
+
+    public function category()
+    {
+        $Category = Categories::all();
+        return view('category', compact('Category'));
     }
 
     public function news(){

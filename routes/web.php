@@ -28,8 +28,8 @@ Auth::routes();
 
 Route::get('/store', 'HomeController@index')->name('store');
 Route::get('/store', 'HomeController@store')->name('store');
+Route::get('/category', 'HomeNavController@category')->name('category');
 Route::get('/about', 'HomeNavController@about')->name('about');
-Route::get('/contact', 'HomeNavController@contact')->name('contact');
 Route::get('/team', 'HomeNavController@team')->name('team');
 
 
