@@ -1,5 +1,10 @@
 <?php
+
+use App\Mail\ContactMail;
+use App\Post;
+use ILuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use TCG\Voyager\Facades\Voyager;
 
@@ -75,5 +80,3 @@ Route::get('/report','ProductController@report');
 Route::get('/reportBill','ProductController@reportBill');
 
 
-//comment
-Route::get('/posts/create','PostController@index');

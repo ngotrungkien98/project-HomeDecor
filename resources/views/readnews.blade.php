@@ -2,7 +2,8 @@
 @section('content')
 @foreach ($news as $news)
 <html>
-   {!! $news -> description !!}
+  {!! $news -> description !!}   
+
 </html>
 @endforeach
 @endsection

@@ -198,6 +198,11 @@ class ProductController extends Controller
     public function reportBill()
     {
         $pdf = PDF::loadView('report.pdfBill');
+        if (session()->has('cart')) {
+            $cart = new Cart(session()->get('cart'));
+        } else {
+            $cart = null;
+        }
         return $pdf->download('reportBill.pdf');
 
     }

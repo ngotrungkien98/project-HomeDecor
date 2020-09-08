@@ -124,6 +124,10 @@
    </div>
    @include('sweetalert::alert')
    @yield('script')
+   <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=328473508273292&autoLogAppEvents=1" nonce="rKujflOV"></script>
+<div class="fb-comments" data-href="{{ Request::url() }}" data-numposts="5" data-width=""></div>
+
    <!-- Footer-->
    <footer class="footer py-4">
       <div class="container">
