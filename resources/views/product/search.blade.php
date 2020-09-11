@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <!-- Masthead-->
-
+<div class="row">
     @foreach ($products as $product)
     <div class="col-md-4">
         <div class="card mb-2">
@@ -16,6 +16,6 @@
         </div>
     </div>
     @endforeach
-
+</div>
 
 @endsection
